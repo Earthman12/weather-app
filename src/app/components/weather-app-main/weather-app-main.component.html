@@ -1,0 +1,49 @@
+<div id = "weatherAppMainDiv">
+
+    <div class = "sectionA">
+
+        
+        <div class = "appRow date">{{WeatherData.currentDate}}</div>
+        <div class = "appRow">Sunrise: {{WeatherData.sunriseTime}} AM</div>
+        <div class = "appRow">Sunset: {{WeatherData.sunsetTime}} PM</div>
+
+        
+        
+        
+
+    </div>
+
+    <div class = "sectionB">
+
+        <div class = "appRow city">{{WeatherData.city}}</div>
+        <div class = "appRow">{{WeatherData.mainDesc}}, {{WeatherData.description}}</div>
+        <div class = "appRow currentTemp">{{WeatherData.tempFahrenheit}}°F</div>
+
+        <!-- ngIf runs a conditional check based on values from Js component file and renders the div if its true -->
+        <div class = "appRow" *ngIf = "WeatherData.isDayTime">
+            <!-- fas references the font awesome script and knows to looks in the 'solid' (far for 'regular' or fab for 'brands') folder for the 'sun' (fa-sun) icon, fa-4x makes it larger -->
+            <i class = "fas fa-sun fa-5x sunIcon"></i>
+        </div>
+        <div class = "appRow" *ngIf = "!WeatherData.isDayTime">
+            <i class = "fas fa-moon fa-5x moonIcon"></i>
+        </div>
+        <div class = "appRow" *ngIf = "WeatherData.isCloudy">
+            <i class = "fas fa-cloud fa-4x cloudIcon"></i>
+        </div>
+
+        <div class = "appRow OWM">Data courtesy of OpenWeatherMap</div>
+
+    </div>
+
+    <div class = "sectionC">
+        
+        <div class = "appRow">Low: {{WeatherData.tempLow}}°F</div>
+        <div class = "appRow">High: {{WeatherData.tempHigh}}°F</div>
+    
+        <div class = "appRow">Wind Speed: {{WeatherData.windSpeed}} mph</div>
+
+        
+
+    </div>
+
+</div>

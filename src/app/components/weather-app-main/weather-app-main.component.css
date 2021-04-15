@@ -1,0 +1,50 @@
+*{
+    margin: auto;
+}
+
+html{
+    font-size: 16px;
+}
+
+#weatherAppMainDiv{
+    padding: 1em 0;
+    width: 35vw;
+    display: flex;
+    text-align: center;
+    background: linear-gradient(to bottom right, blue, lightgreen);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.sunIcon{
+    color: yellow;
+    margin-bottom: -.25em;
+}
+
+.moonIcon{
+    color: white;
+    margin-bottom: -.25em;
+}
+
+.cloudIcon{
+    margin-top: -.25em;
+    color: white;
+}
+
+.OWM{
+    
+}
+
+.appRow{
+    padding: .25em 0;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.city{
+    font-size: 2rem;
+}
+
+.currentTemp{
+    font-size: 2rem;
+}
